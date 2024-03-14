@@ -1,4 +1,4 @@
-<h1> Padrão Observer </h1>
+<h2> Padrão Observer </h2>
 <p> 
   Um exemplo simples da aplicação do padrão de projeto Observer
 </p>
