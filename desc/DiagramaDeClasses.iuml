@@ -1,0 +1,45 @@
+@startuml DiagramaDeClasses
+
+interface Observer {
+    + update(): void
+}
+
+class Relogio {
+    - dados: Dados
+    + Relogio(dados: Dados)
+    + medeGlicose(glicose: String): void
+    + medePressao(pressao: String): void
+    + update(): void
+    + toString(): String
+}
+
+class Celular {
+    - dados: Dados
+    + Celular(dados: Dados)
+    + recebeNotificacao(notificacao: String): void
+    + update(): void
+    + toString(): String
+}
+
+class Dados {
+    - observers: ArrayList<Observer>
+    - notificacao: String
+    - glicose: String
+    - pressao: String
+    + Dados(notificacao: String, glicose: String, pressao: String)
+    + setDados(glicose: String, pressao: String, notificacao: String): void
+    + getGlicose(): String
+    + getNotificacao(): String
+    + getPressao(): String
+    + attach(observer: Observer): void
+    + deattach(observer: Observer): void
+    + nofityAllObservers(): void
+    + toString(): String
+}
+
+Relogio -up-|> Observer
+Celular -up-|> Observer
+Dados "1" -left- "n" Observer
+
+
+@enduml
