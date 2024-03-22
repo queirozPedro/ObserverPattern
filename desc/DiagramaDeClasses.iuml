@@ -39,7 +39,7 @@ class Dados {
 
 Relogio -up-|> Observer
 Celular -up-|> Observer
-Dados "1" -left- "n" Observer
+Dados "1" --> "0..*" Observer
 
 
 @enduml
