@@ -5,7 +5,7 @@ public class Relogio implements Observer{
     // Quando o Relógio é criado ele já se atacha aos Dados
     public Relogio(Dados dados) {
         this.dados = dados;
-        this.dados.attach(this);
+        this.dados.attach(this);;
     }    
     
     public void medeGlicose(String glicose){

@@ -4,6 +4,12 @@ interface Observer {
     + update(): void
 }
 
+interface Subject {
+    + attach(observer: Observer): void
+    + deattach(observer: Observer): void
+    + nofityAllObservers(): void
+}
+
 class Relogio {
     - dados: Dados
     + Relogio(dados: Dados)
@@ -37,9 +43,9 @@ class Dados {
     + toString(): String
 }
 
-Relogio -up-|> Observer
-Celular -up-|> Observer
-Dados "1" --> "0..*" Observer
-
+Relogio -up-> Observer
+Celular -up-> Observer
+Dados "1"--"0..n" Observer
+Dados <-left- Subject
 
 @enduml

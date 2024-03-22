@@ -1,7 +1,7 @@
 import java.util.ArrayList;
 
 // Classe Subject, que será observada pelo Celular e pelo Relogio
-public class Dados {
+public class Dados implements Subject{
 
     // Esses são os Observers, o Subject não conhece eles diretamente, mas sim a interface
     private ArrayList<Observer> observers = new ArrayList<>();
