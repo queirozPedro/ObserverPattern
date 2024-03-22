@@ -3,8 +3,7 @@ import java.util.ArrayList;
 // Classe Subject, que será observada pelo Celular e pelo Relogio
 public class Dados {
 
-    // Esses são os Observers, o Subject não conhece eles diretamente, mas sim a
-    // interface
+    // Esses são os Observers, o Subject não conhece eles diretamente, mas sim a interface
     private ArrayList<Observer> observers = new ArrayList<>();
 
     // Esses serão os dados que serão observados
@@ -32,11 +31,9 @@ public class Dados {
     public String getGlicose() {
         return glicose;
     }
-
     public String getNotificacao() {
         return notificacao;
     }
-
     public String getPressao() {
         return pressao;
     }
@@ -67,6 +64,9 @@ public class Dados {
         }
     }
 
+    /**
+     * Um método toString simples para exibir os dados
+     */
     @Override
     public String toString() {
         return "Notificação: " + notificacao + ", Glicose: " + glicose + ", Pressão: " + pressao;
