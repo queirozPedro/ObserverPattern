@@ -23,7 +23,7 @@ public class Dados {
     public void setDados(String glicose, String pressao, String notificacao) {
         this.glicose = glicose != null || glicose == ""? glicose: this.glicose;
         this.pressao = pressao != null || pressao == ""? pressao: this.pressao;
-        this.notificacao = notificacao != null || notificacao == ""? notificacao: this.notificacao;
+        this.notificacao += notificacao != null || notificacao == ""? notificacao: this.notificacao;
         nofityAllObservers();
     }
 
@@ -41,8 +41,20 @@ public class Dados {
         return pressao;
     }
 
+    /**
+     * O método de atachar observers, recebe um observer adiciona a lista
+     * @param observer
+     */
     public void attach(Observer observer) {
         observers.add(observer);
+    }
+
+    /**
+     * Um método que remove um observer
+     * @param observer
+     */
+    public void deattach(Observer observer){
+        observers.remove(observer);
     }
 
     /**
