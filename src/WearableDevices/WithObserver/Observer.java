@@ -1,3 +1,10 @@
+/**
+ * A interface Observer
+ */
 public interface Observer {
-    public void update(String data);
+    /**
+     * O método update serve para atualizar os dados das classes Observer
+     * @param data
+     */
+    public void update();
 }
