@@ -11,7 +11,7 @@ public class Main {
         System.out.println(celular.toString());
         System.out.println(relogio.toString() + "\n");
 
-        // Esses dados serão obtidos pelos sensores no smartwatch e atualizados
+        // Esses dados s-erão obtidos pelos sensores no smartwatch e atualizados
         System.out.println("Relógio mediu a glicose e atualizou o sistema");
         relogio.medeGlicose("78 mg/dl");
         System.out.println();
